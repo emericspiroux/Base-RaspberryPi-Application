@@ -1,0 +1,44 @@
+@import '../../../Common/Styles/color';
+
+.SpotifyAlarmOneClockHourForm {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 65%;
+	max-height: 200px;
+	max-width: 400px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.SpotifyAlarmOneClockHourForm__clock {
+	width: 45%;
+	height: 100%;
+}
+
+.SpotifyAlarmOneClockHourForm__clock__text {
+	text-align: center;
+	font-size: 40px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50%;
+}
+
+.SpotifyAlarmOneClockHourForm__clock__button {
+	background-image: url('../../../../Images/Icons/icon_arrowBottom.png');
+	background-position: center;
+	background-size: 15px;
+	background-repeat: no-repeat;
+	height: 25%;
+	border-top: 1px solid;
+}
+
+.SpotifyAlarmOneClockHourForm__clock__button--bottom {
+}
+
+.SpotifyAlarmOneClockHourForm__clock__button--top {
+	transform: rotate(180deg);
+}

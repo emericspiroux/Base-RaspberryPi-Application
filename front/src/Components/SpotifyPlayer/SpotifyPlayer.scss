@@ -1,0 +1,17 @@
+@import '../Common/Styles/color';
+
+.SpotifyPlayer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+}
+
+.SpotifyPlayer__notReady {
+	font-size: 14px;
+}
+
+.SpotifyPlayer__error {
+	text-align: center;
+}

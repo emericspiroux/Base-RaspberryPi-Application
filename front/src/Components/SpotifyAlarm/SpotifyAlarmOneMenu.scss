@@ -1,0 +1,91 @@
+@import '../Common/Styles/color';
+
+.SpotifyAlarmOneMenu {
+	display: flex;
+	align-items: center;
+	height: 13%;
+	width: 100%;
+	justify-content: space-around;
+	margin-bottom: 5%;
+}
+
+.SpotifyAlarmOneMenu__loader {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.SpotifyAlarmOneMenu__button {
+	position: absolute;
+	$size: 40px;
+	top: 10px;
+	right: 10px;
+	border-radius: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40%;
+	width: $size;
+	height: $size;
+	transition: 200ms transform;
+}
+
+.SpotifyAlarmOneMenu__button--error {
+	background-color: $red;
+	background-image: url('../../Images/Icons/icon_information.png');
+}
+
+.SpotifyAlarmOneMenu__button--save {
+	background-color: $green;
+	background-image: url('../../Images/Icons/icon_save.png');
+}
+
+.SpotifyAlarmOneMenu__button:active {
+	transform: scale(0.85);
+}
+
+.SpotifyAlarmOneMenu__button--save--disabled {
+	opacity: 0.1;
+}
+
+.SpotifyAlarmOneMenu__button--save--disabled:active {
+	transform: none;
+}
+
+.SpotifyAlarmOneMenu__tab {
+	height: 100%;
+	width: 25%;
+	border: 1px solid white;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-top: 0;
+}
+
+.SpotifyAlarmOneMenu__tab--clock {
+	background-image: url('../../Images/Icons/icon_clock.png');
+}
+
+.SpotifyAlarmOneMenu__tab--music {
+	background-image: url('../../Images/Icons/icon_music.png');
+}
+
+.SpotifyAlarmOneMenu__tab--tools {
+	background-image: url('../../Images/Icons/icon_wrench.png');
+}
+
+.SpotifyAlarmOneMenu__tab--selected {
+	background-color: white;
+	&.SpotifyAlarmOneMenu__tab--clock {
+		background-image: url('../../Images/Icons/icon_clock_grey.png');
+	}
+
+	&.SpotifyAlarmOneMenu__tab--music {
+		background-image: url('../../Images/Icons/icon_music_grey.png');
+	}
+
+	&.SpotifyAlarmOneMenu__tab--tools {
+		background-image: url('../../Images/Icons/icon_wrench_grey.png');
+	}
+}

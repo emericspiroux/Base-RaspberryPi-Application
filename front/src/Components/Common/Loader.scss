@@ -1,0 +1,17 @@
+@import '../Common/Styles/color';
+
+.Loader {
+	border-radius: 50%;
+	animation: 1s infinite linear process;
+	border: 5px solid $grey-dark-opacity;
+	border-left-color: $green;
+
+	@keyframes process {
+		from {
+			transform: rotate(0);
+		}
+		to {
+			transform: rotate(360deg);
+		}
+	}
+}

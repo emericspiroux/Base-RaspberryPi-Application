@@ -1,0 +1,38 @@
+{
+  "parser": "typescript-eslint",
+  "parserOptions": {
+  "sourceType": "module",
+  "allowImportExportEverywhere": false,
+  "codeFrame": false
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react-hooks"
+  ],
+  "extends": ["airbnb", "prettier"],
+  "settings": {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx", ".mjs"]
+  },
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/no-named-as-default": 0,
+    "import/no-named-as-default-member": 0,
+    "max-len": ["error", {"code": 100}],
+    "prefer-promise-reject-errors": ["off"],
+    "react/jsx-filename-extension": ["off"],
+    "react/prop-types": ["warn"],
+    "no-return-assign": ["off"],
+    "no-unused-vars": ["error", {"vars": "all", "args": "after-used", "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "peerDependencies": false
+      }
+   ]
+  }
+}

@@ -1,0 +1,62 @@
+@import '../Common/Styles/color';
+
+.SpotifyAlarmWindow {
+	position: absolute;
+	top: 5px;
+	left: 00px;
+	right: 0px;
+	bottom: 0px;
+	background-color: $grey-dark;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	animation: 500ms ease-in-out openWindow;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+.SpotifyAlarmWindow--closing {
+	animation: 500ms ease-in-out closeWindow;
+}
+
+.SpotifyAlarmWindow__button {
+	$size: 40px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	border-radius: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40%;
+	width: $size;
+	height: $size;
+}
+
+.SpotifyAlarmWindow__button--close {
+	background-color: $red;
+	background-image: url('../../Images/Icons/icon_close.png');
+}
+
+.SpotifyAlarmWindow__button--back {
+	background-color: $blue;
+	background-image: url('../../Images/Icons/icon_arrowLeft.png');
+}
+
+@keyframes openWindow {
+	from {
+		transform: translateY(200%);
+		display: hide;
+	}
+	to {
+		transform: translateY(0%);
+	}
+}
+
+@keyframes closeWindow {
+	from {
+		transform: translateY(0%);
+	}
+	to {
+		display: hide;
+		transform: translateY(200%);
+	}
+}

@@ -1,0 +1,34 @@
+@import '../Common/Styles/color';
+
+.SpotifyAlarmLogs {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	h2 {
+		text-align: center;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+}
+
+.SpotifyAlarmLogs__content {
+	display: flex;
+	height: calc(100% - 80px);
+	padding-bottom: 12px;
+}
+
+.SpotifyAlarmLogs__content--loading {
+	justify-content: center;
+	align-items: center;
+}
+
+.SpotifyAlarmLogs__content--logs {
+	flex-direction: column;
+	font-size: 12px;
+}
+
+.SpotifyAlarmLogs__content__logs {
+	overflow: scroll;
+	white-space: pre-line;
+}

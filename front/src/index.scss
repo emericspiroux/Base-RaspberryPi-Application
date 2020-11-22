@@ -1,0 +1,111 @@
+@import './Components/Common/Styles/color.scss';
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+		'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	height: 100%;
+	overflow: hidden;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none;
+}
+
+#root {
+	height: 100%;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.xs-top {
+	margin-top: 4px;
+}
+
+.s-top {
+	margin-top: 6px;
+}
+
+.m-top {
+	margin-top: 10px;
+}
+
+.l-top {
+	margin-top: 21px;
+}
+
+.xs-bottom {
+	margin-bottom: 4px;
+}
+
+.s-bottom {
+	margin-bottom: 6px;
+}
+
+.m-bottom {
+	margin-bottom: 10px;
+}
+
+.l-bottom {
+	margin-bottom: 21px;
+}
+
+.xl-bottom {
+	margin-bottom: 36px;
+}
+
+button {
+	border-radius: 50px;
+	font-weight: bold;
+	border: none;
+	transition: 200ms transform;
+	&.base {
+		height: 40px;
+		width: 100%;
+		max-width: 200px;
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+	&.green {
+		color: white;
+		background-color: $green;
+	}
+}
+
+button:focus {
+	outline: none;
+}
+
+button:active {
+	transform: scale(0.85);
+}
+
+button:disabled {
+	opacity: 0.1;
+	&:active {
+		transform: none;
+	}
+}
+
+input {
+	padding: 12px 10px;
+	border-radius: 50px;
+	border: none;
+	&.input--center {
+		text-align: center;
+	}
+}
+
+input:focus {
+	outline: none;
+}

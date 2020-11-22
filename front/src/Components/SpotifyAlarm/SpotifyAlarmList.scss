@@ -1,0 +1,129 @@
+@import '../Common/Styles/color';
+
+.SpotifyAlarmList {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+}
+
+.SpotifyAlarmList__goTop,
+.SpotifyAlarmList__goBottom {
+	height: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	img {
+		height: 50%;
+	}
+	transition: 100ms transform;
+}
+
+.SpotifyAlarmList__goTop {
+	img {
+		transform: rotate(180deg);
+	}
+}
+
+.SpotifyAlarmList__goTop:active,
+.SpotifyAlarmList__goBottom:active {
+	transform: scale(0.85);
+}
+
+.SpotifyAlarmList__go--disabled,
+.SpotifyAlarmList__go--disabled:active {
+	opacity: 0.1;
+	transform: none;
+}
+
+.SpotifyAlarmList__goTop:after,
+.SpotifyAlarmList__goBottom:after {
+	content: '';
+	position: absolute;
+	height: 1px;
+	background-color: white;
+	opacity: 0.3;
+	width: 100%;
+}
+
+.SpotifyAlarmList__goTop:after {
+	bottom: 0px;
+}
+
+.SpotifyAlarmList__goBottom:after {
+	top: 0px;
+}
+
+.SpotifyAlarmList__listWrapper {
+	flex-grow: 1;
+	position: relative;
+	overflow: hidden;
+}
+
+.SpotifyAlarmList__listWrapper__element {
+	height: 25%;
+}
+
+.SpotifyAlarmList__listWrapper__add {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.SpotifyAlarmList__listWrapper__add__button {
+	$size: 30px;
+	margin-right: 12px;
+	background-image: url('../../Images/Icons/icon_more.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40%;
+	background-color: $green;
+	border-radius: 50%;
+	width: $size;
+	height: $size;
+}
+
+.SpotifyAlarmList__button {
+	position: absolute;
+	$size: 40px;
+	width: $size;
+	height: $size;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40%;
+	border-radius: 50%;
+}
+
+.SpotifyAlarmList__button--stop {
+	bottom: 10px;
+	left: 10px;
+	background-color: $blue;
+	background-image: url('../../Images/Icons/icon_stop.png');
+}
+
+.SpotifyAlarmList__button--settings {
+	top: 10px;
+	right: 10px;
+	background-color: $blue;
+	background-image: url('../../Images/Icons/icon_wrench.png');
+}
+
+.SpotifyAlarmList__button--settings--hasUpdate {
+	&:after {
+		content: '';
+		$size: 20px;
+		position: absolute;
+		height: $size;
+		width: $size;
+		background-color: $green;
+		background-image: url('../../Images/Icons/icon_refresh.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 40%;
+		border-radius: 50%;
+		bottom: -$size/6;
+		right: -$size/6;
+	}
+}

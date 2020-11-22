@@ -1,0 +1,72 @@
+@import '../Styles/color';
+
+.SpotifyAlarmCheckboxForm {
+	display: flex;
+	align-items: center;
+	height: 30%;
+}
+
+.SpotifyAlarmCheckboxForm__label {
+	font-weight: 600;
+	flex-grow: 1;
+}
+
+.SpotifyAlarmCheckboxForm__checkBoxWrapper {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+
+$checkboxWidth: 60px;
+$checkboxHeight: 30px;
+$checkboxPadding: 3px;
+$pinPadding: 4px;
+$animationTime: 300ms;
+
+.SpotifyAlarmCheckboxForm__checkBoxWrapper__checkbox {
+	width: $checkboxWidth;
+	height: $checkboxHeight;
+	border-radius: 50px;
+	// border: 1px solid white;
+	position: relative;
+	overflow: hidden;
+	padding: $checkboxPadding;
+}
+
+.SpotifyAlarmCheckboxForm__checkBoxWrapper__checkbox__toggle {
+	display: flex;
+	width: $checkboxWidth;
+	.SpotifyAlarmCheckboxForm__checkBoxWrapper__checkbox__toggle__background {
+		background-color: $red;
+	}
+	.SpotifyAlarmCheckboxForm__checkBoxWrapper__checkbox__toggle__pin {
+		transform: translate($checkboxPadding);
+	}
+}
+
+.SpotifyAlarmCheckboxForm__checkBoxWrapper__checkbox__toggle--enable {
+	.SpotifyAlarmCheckboxForm__checkBoxWrapper__checkbox__toggle__background {
+		background-color: $green;
+	}
+	.SpotifyAlarmCheckboxForm__checkBoxWrapper__checkbox__toggle__pin {
+		transform: translate($checkboxWidth - $checkboxHeight + $checkboxPadding);
+	}
+}
+
+.SpotifyAlarmCheckboxForm__checkBoxWrapper__checkbox__toggle__background {
+	width: $checkboxWidth;
+	height: $checkboxHeight;
+	border-radius: 50px;
+	transition: $animationTime background-color;
+}
+
+.SpotifyAlarmCheckboxForm__checkBoxWrapper__checkbox__toggle__pin {
+	transition: $animationTime transform;
+	width: $checkboxHeight - $pinPadding;
+	height: $checkboxHeight - $pinPadding;
+	background-color: white;
+	border-radius: 50%;
+	position: absolute;
+	top: $pinPadding + 1;
+	left: $pinPadding/2;
+}

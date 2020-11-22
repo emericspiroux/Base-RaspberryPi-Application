@@ -1,0 +1,67 @@
+@import '../Styles/color';
+
+.SpotifyAlarmSliderForm {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 30%;
+	max-height: 200px;
+	max-width: 400px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.SpotifyAlarmSliderForm__buttonWrapper {
+	width: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.SpotifyAlarmSliderForm__buttonWrapper__button {
+	$size: 40px;
+	border-radius: 50%;
+	border: 1px solid white;
+	width: $size;
+	height: $size;
+	background-position: center;
+	background-size: 40%;
+	background-repeat: no-repeat;
+	flex-shrink: 0;
+}
+
+.SpotifyAlarmSliderForm__buttonWrapper:active {
+	transform: scale(0.85);
+}
+
+.SpotifyAlarmSliderForm__buttonWrapper--disabled,
+.SpotifyAlarmSliderForm__buttonWrapper--disabled:active {
+	opacity: 0.1;
+	transform: none;
+}
+
+.SpotifyAlarmSliderForm__progressBar {
+	width: 70%;
+	position: relative;
+	height: 4px;
+	background-color: $grey;
+	border-radius: 50px;
+	overflow: hidden;
+	flex-shrink: 1;
+}
+
+.SpotifyAlarmSliderForm__progressBar__cursor {
+	background-color: $green;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	transition: 200ms width;
+}
+
+.SpotifyAlarmSliderForm__buttonWrapper {
+}
+
+.SpotifyAlarmSliderForm__buttonWrapper__button {
+}

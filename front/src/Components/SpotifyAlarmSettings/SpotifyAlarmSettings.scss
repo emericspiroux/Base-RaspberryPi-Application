@@ -1,0 +1,44 @@
+@import '../Common/Styles/color';
+
+.SpotifyAlarmSettings {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	h2 {
+		text-align: center;
+	}
+}
+
+.SpotifyAlarmSettings__content {
+	display: grid;
+	height: 80%;
+	align-items: center;
+}
+
+.SpotifyAlarmSettings__version {
+	font-size: 14px;
+	text-align: center;
+}
+
+.SpotifyAlarmSettings__version__logs {
+	color: white;
+}
+
+.SpotifyAlarmSettings__button {
+	position: absolute;
+	$size: 40px;
+	width: $size;
+	height: $size;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40%;
+	border-radius: 50%;
+}
+
+.SpotifyAlarmSettings__button--light {
+	bottom: 10px;
+	right: 10px;
+	background-color: $blue;
+	background-image: url('../../Images/Icons/icon_light.png');
+}

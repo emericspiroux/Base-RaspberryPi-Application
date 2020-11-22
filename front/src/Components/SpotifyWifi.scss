@@ -1,0 +1,24 @@
+@import './Common/Styles/color';
+
+.SpotifyWifi {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	background-color: $black;
+	button {
+		height: 40px;
+		width: 100%;
+		max-width: 200px;
+		color: white;
+		background-color: $green;
+	}
+}
+
+.SpotifyWifi__form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}

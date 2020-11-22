@@ -1,0 +1,74 @@
+@import '../Common/Styles/color';
+
+$buttonSize: 90px;
+
+.SpotifyControlers {
+	width: 100%;
+	max-width: 360px;
+	margin-left: auto;
+	margin-right: auto;
+	animation: 500ms appear;
+	@keyframes appear {
+		from {
+			transform: transition(-200%);
+		}
+		to {
+			transform: transition(0%);
+		}
+	}
+}
+
+.SpotifyControlers__buttonWrapper {
+	display: flex;
+	width: fit-content;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.SpotifyControlers__button:active {
+	transform: scale(0.85);
+}
+
+.SpotifyControlers__button {
+	flex-shrink: 0;
+	$size: $buttonSize;
+	height: $size;
+	width: $size;
+	border: 2px solid white;
+	border-radius: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 40%;
+	transition: 100ms transform;
+}
+
+.SpotifyControlers__button--disabled {
+	opacity: 0.2;
+}
+
+.SpotifyControlers__button--disabled:active {
+	transform: none;
+}
+
+.SpotifyControlers__button--small {
+	$size: (($buttonSize/3) * 2.5);
+	height: $size;
+	width: $size;
+}
+
+.SpotifyControlers__button--previous {
+	background-image: url('../../Images/Icons/icon_previous.png');
+}
+
+.SpotifyControlers__button--pause {
+	background-image: url('../../Images/Icons/icon_pause.png');
+}
+
+.SpotifyControlers__button--play {
+	background-image: url('../../Images/Icons/icon_play.png');
+}
+
+.SpotifyControlers__button--next {
+	background-image: url('../../Images/Icons/icon_next.png');
+}

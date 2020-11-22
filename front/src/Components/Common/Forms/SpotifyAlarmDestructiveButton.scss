@@ -1,0 +1,26 @@
+@import '../Styles/color';
+
+.SpotifyAlarmDestructiveButton {
+	color: white;
+	border-radius: 50px;
+	height: 60px;
+	width: 100%;
+	background-color: $red;
+	font-size: 18px;
+	font-weight: bold;
+	border: none;
+}
+
+.SpotifyAlarmDestructiveButton:focus {
+	outline: none;
+}
+
+.SpotifyAlarmDestructiveButton:active {
+	transform: scale(0.95);
+}
+
+.SpotifyAlarmDestructiveButton--disabled,
+.SpotifyAlarmDestructiveButton--disabled:active {
+	opacity: 0.3;
+	transform: none;
+}

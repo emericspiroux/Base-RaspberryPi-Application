@@ -1,0 +1,73 @@
+@import '../../../../Common/Styles/color';
+
+.SpotifyAlarmOneMusicPlaylistsCarousel {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.SpotifyAlarmOneMusicPlaylistForm__container {
+	width: 100%;
+	height: 100%;
+}
+
+.SpotifyAlarmOneMusicPlaylistsCarousel__button {
+	width: 60px;
+	height: 100%;
+	background-image: url('../../../../../Images/Icons/icon_arrowRight.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20px;
+	border-left: 1px solid white;
+	transition: 200ms transform;
+}
+
+.SpotifyAlarmOneMusicPlaylistsCarousel__button--right:active {
+	transform: scale(0.85);
+}
+
+.SpotifyAlarmOneMusicPlaylistsCarousel__button--left:active {
+	transform: scale(-0.85);
+}
+
+.SpotifyAlarmOneMusicPlaylistsCarousel__button--disabled {
+	opacity: 0.1;
+	transform: none;
+}
+
+.SpotifyAlarmOneMusicPlaylistsCarousel__button--left {
+	transform: rotate(180deg);
+}
+
+.SpotifyAlarmOneMusicPlaylistsCarousel__playlistDisplayWrapper__container {
+	overflow: hidden;
+	width: 100%;
+}
+
+.SpotifyAlarmOneMusicPlaylistsCarousel__playlistDisplayWrapper {
+	display: flex;
+	position: relative;
+	height: 220px;
+	transition: 200ms transform;
+}
+
+.SpotifyAlarmOneMusicPlaylistsCarousel__playlistDisplayWrapper__element {
+	transition: 200ms transform, 200ms width;
+	flex-shrink: 0;
+}
+
+$perspective: 400px;
+
+.SpotifyAlarmOneMusicPlaylistsCarousel__playlistDisplayWrapper__element--before {
+	width: 20px;
+	transform: perspective($perspective) rotate3d(0, 1, 0, -70deg);
+}
+
+.SpotifyAlarmOneMusicPlaylistsCarousel__playlistDisplayWrapper__element--after {
+	transform: perspective($perspective) rotate3d(0, 1, 0, 70deg);
+	width: 20px;
+}
+
+.SpotifyAlarmOneMusicPlaylistsCarousel__playlistDisplayWrapper__element--current {
+	width: 200px;
+}

@@ -1,0 +1,27 @@
+@import '../Common/Styles/color';
+
+.SpotifyAlarmElement {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid $grey;
+}
+
+.SpotifyAlarmElement__text {
+	flex-grow: 1;
+}
+
+.SpotifyAlarmElement__text__day {
+	width: 100%;
+	max-width: 200px;
+}
+
+.SpotifyAlarmElement__hour {
+	font-size: 20px;
+	margin-right: 32px;
+}
+
+.SpotifyAlarmElement__enabler {
+	img {
+		width: 25px;
+	}
+}

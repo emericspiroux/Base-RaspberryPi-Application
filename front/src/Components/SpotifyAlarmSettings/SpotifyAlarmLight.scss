@@ -1,0 +1,17 @@
+@import '../Common/Styles/color';
+
+.SpotifyAlarmLight {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	h2 {
+		text-align: center;
+	}
+}
+
+.SpotifyAlarmLight__content {
+	display: flex;
+	height: 80%;
+	align-items: center;
+}
