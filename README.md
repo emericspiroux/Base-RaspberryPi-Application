@@ -3,6 +3,8 @@ Raspberry Pi Spotify Alarm.
 
 ## Configuration 
 
+Raspberry Pi OS August 2020 is required for this software due to chromium version update on next release: [download here](https://downloads.raspberrypi.org/raspios_full_armhf/images/raspios_full_armhf-2020-08-24/2020-08-20-raspios-buster-armhf-full.zip)
+
 Add [Spotify keys](https://developer.spotify.com/dashboard) inside `/back/.env` file :
 
 ```
